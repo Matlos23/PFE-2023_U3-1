@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from 'react'
+/*React core*/
+import React,{ useState, useEffect} from 'react'
 
-
-const Calama = () => {
-
-    return (
+//function Holamundo(){}
+    
+const HolaCalama = () =>{
+    return(
         <>
-            <h1>Ejemplo de página / componente</h1>
-            <h2>Mensaje: Calama</h2>
+            <h1>Hola Calama</h1>
+            {/*<p className='algo'>Diga algo</p>*/}
+            <p>Los párrafos son partes de un texto que empiezan con una letra mayúscula (por ejemplo, A, B, C)
+                y que terminan con un punto y aparte, es decir, que después de este punto no se continúa escribiendo en el mismo renglón.</p>
         </>
     )
 }
-
-export default Calama
+export default HolaCalama

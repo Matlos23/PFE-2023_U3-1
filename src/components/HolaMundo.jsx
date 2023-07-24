@@ -1,16 +1,14 @@
-/* react core */
-import React, { useState, useEffect } from 'react'
+/*React core*/
+import React,{ useState, useEffect} from 'react'
 
-// function HolaMundo () {
-/* View */
-const HolaMundo = () => {
-
-    return (
+//function Holamundo(){}
+    
+const Holamundo = () =>{
+    return(
         <>
             <h1>Hola mundo</h1>
-            {/* <p className="algo">Diga algo</p> */}
+            {/*<p className='algo'>Diga algo</p>*/}
         </>
     )
 }
-
-export default HolaMundo
+export default Holamundo

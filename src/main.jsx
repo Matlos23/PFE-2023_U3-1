@@ -1,57 +1,38 @@
-// core - react
 import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import ReactDOM from 'react-dom/client'
-import {
-    createBrowserRouter,
-    RouterProvider,
-} from "react-router-dom"
+import App from './App.jsx'
+import { 
+  createBrowserRouter, RouterProvider, Routes 
+} from 'react-router-dom'
+import './index.css'
+import Holamundo from './Components/Holamundo.jsx'
+import HolaCalama from './Components/calama.jsx'
+import Tareas from "./components/tareas/Tareas.jsx"
 
-
-// components
-import App from './App.jsx' // main app
-import HolaMundo from "./components/HolaMundo" // router example
-import Calama from "./components/Calama.jsx" // router example
-
-// components: ejemplos 01
-import EstadosInicio from "./components/ej01_estados/EstadosInicio"
-import EstadosInput from "./components/ej01_estados/EstadosInput.jsx"
-
-// components: ejercicio 01
-import Ejercicio01 from "./components/ejercicios/Ejercicio01.jsx";
-
-// app routes
 const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <App />,
-    },
-    {
-        path: "/hola",
-        element: <HolaMundo />
-    },
-    {
-        path: "/ciudad",
-        element: <Calama />
-    },
-    // routes: ejemplos 01
-    {
-        path: "/ejemplos/01/estados-inicial",
-        element: <EstadosInicio />
-    },
-    {
-        path: "/ejemplos/01/estados-input",
-        element: <EstadosInput />
-    },
-    // routes: Ejercicio 01 taller presencial
-    {
-        path: "/ejercicio01",
-        element: <Ejercicio01 />
-    }
+  {
+    path:"/",
+    element:<App/>,
+  },
+  {
+    path:"/ciudad",
+    element:<HolaCalama/>,
+  },
+  {
+    path:"/holamundo",
+    element:<Holamundo/>,
+  },
+  {
+    path: "/tareas",
+    element: <Tareas/>
+  }
+
 ])
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-      <RouterProvider router={router} />
+    <RouterProvider router={router}/>
   </React.StrictMode>,
 )
